@@ -1,3 +1,15 @@
+let table;
 document.addEventListener('DOMContentLoaded', function () {
-    let table = new DataTable('#example');
+    table = new DataTable(
+        '#example', {
+            scrollY: 600,
+            'columnDefs': [
+                {
+                   'targets': 0,
+                   'checkboxes': {
+                      'selectRow': true
+                   }
+                }
+             ]
+    });
 });
